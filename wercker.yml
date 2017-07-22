@@ -1,14 +1,9 @@
-box: wercker-labs/docker
+box:
+  id: akinobufujii/cetos7base
+  tag: latest
 
 build:
   steps:
     - script:
-        name: docker help
-        code: docker --help
-
-docker-test:
-  steps:
-    - script:
-        name: docker ps
-        code: docker ps
-  
+        name: echo
+        code: echo "heloo world wercker"
