@@ -1,9 +1,9 @@
 box:
-  id: akinobufujii/cetos7base
+  id: akinobufujii/centos7base
   tag: latest
 
 build:
   steps:
     - script:
         name: echo
-        code: echo "heloo world wercker"
+        code: echo "helllo world wercker"
