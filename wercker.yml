@@ -1,11 +1,12 @@
-box: debian
+build:
+  box: debian
+  steps:
+    - script:
+      name: my box run
+      code: |
+        echo "my box run akinobufujii/centos7base"
+
 #  id: akinobufujii/centos7base
 #  username: $USERNAME
 #  password: $PASSWORD
 #  tag: latest
-build:
-    steps:
-      -script:
-        name: my box run
-        code: |
-          echo "my box run akinobufujii/centos7base"
