@@ -11,3 +11,6 @@ build:
       -script:
         name: my box run
         code: echo "my box run akinobufujii/centos7base"
+      -script:
+        name: my box run2
+        code: echo "my box run2 akinobufujii/centos7base"
