@@ -1,11 +1,8 @@
-# ビルド環境取得
 box:
   id: akinobufujii/centos7base
   username: $USERNAME
   password: $PASSWORD
   tag: latest
-
-# ビルドステップ
 build:
     steps:
       -script:
