@@ -1,12 +1,14 @@
-build:
-  box: debian
-  steps:
-    - script:
-      name: my box run
-      code: |
-        echo "my box run akinobufujii/centos7base"
+# The container definition we want to use for developing our app
+box: python:2.7-slim
 
-#  id: akinobufujii/centos7base
-#  username: $USERNAME
-#  password: $PASSWORD
-#  tag: latest
+# in this dev clause we define the steps we want to take when developing.
+dev:
+  steps:
+    # first we want to run pip-install to install all the dependencies
+    - pip-install
+    # then we want to run a wercker step that watches your files and reloads
+    # when changes are detected.
+    - internal/watch:
+        code: python app.py
+        reload: true
+        
