@@ -1,14 +1,6 @@
-# The container definition we want to use for developing our app
-box: python:2.7-slim
-
-# in this dev clause we define the steps we want to take when developing.
-dev:
+box: wercker-labs/docker
+build:
   steps:
-    # first we want to run pip-install to install all the dependencies
-    - pip-install
-    # then we want to run a wercker step that watches your files and reloads
-    # when changes are detected.
-    - internal/watch:
-        code: python app.py
-        reload: true
-        
+    - script:
+        name: docker test
+        code: docker ps
