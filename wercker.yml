@@ -1,6 +1,14 @@
 box: wercker-labs/docker
+
 build:
   steps:
     - script:
-        name: docker test
+        name: docker help
+        code: docker --help
+
+docker-test:
+  steps:
+    - script:
+        name: docker ps
         code: docker ps
+  
