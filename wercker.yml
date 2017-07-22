@@ -1,8 +1,8 @@
-box:
-  id: akinobufujii/centos7base
-  username: $USERNAME
-  password: $PASSWORD
-  tag: latest
+box: debian
+#  id: akinobufujii/centos7base
+#  username: $USERNAME
+#  password: $PASSWORD
+#  tag: latest
 build:
     steps:
       -script:
